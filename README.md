@@ -19,10 +19,10 @@ estructurados.
 Se utilizan las siguientes herramientas
 
 - [Python], versión: 3.7.0 - Para algoritmos de visión artificial
-- [Arduino], versión 2:1.0.5+dfsg2-4.1 - Microcontrolador + IDE
+- [Arduino], versión 1.8.15 - Microcontrolador + IDE
 - [OpenCV] - Markdown parser done right. Fast and easy to extend.
 - [Twitter Bootstrap] - great UI boilerplate for modern web apps
-- [node.js] - evented I/O for the backend
+- [Ubuntu], versión 20.04.2 LTS - Sistema Operativo (otros SO pueden requerir pasos adicionales no documentados en esta guía)
 - [Express] - fast node.js network app framework [@tjholowaychuk]
 - [Gulp] - the streaming build system
 - [Breakdance](https://breakdance.github.io/breakdance/) - HTML
@@ -45,11 +45,15 @@ pip install -r requirements.txt
 
 ### Arduino
 1. Instalar [Arduino](arduino.cc/en/software).
-2. Abrir el Arduino IDE y navegar hasta Sketch > Import Library > Add Library.
+2. Abrir el Arduino IDE y navegar hasta Sketch > Include Library > Add .ZIP Library.
 3. En la ventana de selección de librería, navegar hasta la carpeta lib del repositorio.
 4. Seleccionar OttoDIYLib.zip.
 5. En la parte de abajo de la ventana principal debería aparecer un mensaje indicando que la librería ha sido instalada.
 6. Para verificar que la librería fue instalada correctamente, ir a Sketch > Import Library. La nueva librería debe estar disponible. Los ejemplos pueden encontrarse en File > Examples > OttoDIYLib.
+7. En Tools, seleccionar:
+   * Board: "Arduino Nano"
+   * Processor: "ATmega328 (Old Bootloader)"
+   * Port COM# (puerto en el cual el Otto está conectado)
 
 ## Recursos utilizados
 Para la implementación de este proyecto se hizo uso de herramientas de código abierto tales como:
@@ -59,7 +63,7 @@ Para la implementación de este proyecto se hizo uso de herramientas de código 
 | Otto DIY robot libraries for Arduino | [Repositorio][OttoDIY] |
 | Clases de Robótica 2 | [Repositorio][Clases] |
 | https://dillinger.io/ | [Sitio Web][Dillinger] |
-| OneDrive | [plugins/onedrive/README.md][PlOd] |
+| Otto Coding Guide | [Guía][OCG] |
 | Medium | [plugins/medium/README.md][PlMe] |
 | Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
 
@@ -125,7 +129,7 @@ MIT
    [df1]: <http://daringfireball.net/projects/markdown/>
    [OpenCV]: <https://opencv.org/>
    [Arduino]: <https://www.arduino.cc/>
-   [node.js]: <http://nodejs.org>
+   [Ubuntu]: <https://ubuntu.com/>
    [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
    [jQuery]: <http://jquery.com>
    [@tjholowaychuk]: <http://twitter.com/tjholowaychuk>
@@ -136,6 +140,6 @@ MIT
    [OttoDIY]: <https://github.com/OttoDIY/OttoDIYLib>
    [Clases]: <https://github.com/RonyBenitez/Clases-Robotica>
    [Dillinger]: <https://dillinger.io/>
-   [PlOd]: <https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md>
+   [OCG]: <https://wikifactory.com/+OttoDIY/otto-diy/v/746ad7d/file/Instruction%20manual/OttoDIY_codingguide_V9.pdf>
    [PlMe]: <https://github.com/joemccann/dillinger/tree/master/plugins/medium/README.md>
    [PlGa]: <https://github.com/RahulHP/dillinger/blob/master/plugins/googleanalytics/README.md>
