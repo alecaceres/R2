@@ -18,8 +18,8 @@ estructurados.
 
 Se utilizan las siguientes herramientas
 
-- [Python] - Para algoritmos de visión artificial
-- [Arduino] - Microcontrolador
+- [Python], versión: 3.7.0 - Para algoritmos de visión artificial
+- [Arduino], versión 2:1.0.5+dfsg2-4.1 - Microcontrolador + IDE
 - [OpenCV] - Markdown parser done right. Fast and easy to extend.
 - [Twitter Bootstrap] - great UI boilerplate for modern web apps
 - [node.js] - evented I/O for the backend
@@ -34,7 +34,8 @@ And of course Dillinger itself is open source with a [public repository][dill]
 
 ## Instalación
 
-El archivo requirements.txt contiene los requisitos necesarios para correr el código Python. Previamente se necesita tener pip instalado (una guía para la instalación se encuentra en [este enlace](https://pip.pypa.io/en/stable/installation/)
+### Python
+El archivo requirements.txt contiene los requisitos necesarios para correr el código Python. Previamente se necesita tener [Python](https://www.python.org/downloads/) y pip instalado (una guía para la instalación se encuentra en [este enlace](https://pip.pypa.io/en/stable/installation/)
 
 En la carpeta principal del repositorio, ejecutar:
 
@@ -42,8 +43,15 @@ En la carpeta principal del repositorio, ejecutar:
 pip install -r requirements.txt
 ```
 
-## Recursos utilizados
+### Arduino
+1. Instalar [Arduino](arduino.cc/en/software).
+2. Abrir el Arduino IDE y navegar hasta Sketch > Import Library > Add Library.
+3. En la ventana de selección de librería, navegar hasta la carpeta lib del repositorio.
+4. Seleccionar OttoDIYLib.zip.
+5. En la parte de abajo de la ventana principal debería aparecer un mensaje indicando que la librería ha sido instalada.
+6. Para verificar que la librería fue instalada correctamente, ir a Sketch > Import Library. La nueva librería debe estar disponible. Los ejemplos pueden encontrarse en File > Examples > OttoDIYLib.
 
+## Recursos utilizados
 Para la implementación de este proyecto se hizo uso de herramientas de código abierto tales como:
 
 | Recurso | Link |
