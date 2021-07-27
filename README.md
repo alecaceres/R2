@@ -55,6 +55,14 @@ pip install -r requirements.txt
    * Processor: "ATmega328 (Old Bootloader)"
    * Port COM# (puerto en el cual el Otto está conectado)
 
+### ESP32
+1. En File > Preferences > Additional Boards Manager URLs, copiar:
+   https://dl.espressif.com/dl/package_esp32_index.json, http://arduino.esp8266.com/stable/package_esp8266com_index.json
+   Clic en el botón OK.
+2. Ir a Tools > Board > Boards Manager...
+3. Buscar esp32. Aparecerá esp32 by Espressif Systems. Clic en Install.
+4. Seleccionar la placa en Tools > Board > ESP32 Arduino.
+
 ## Recursos utilizados
 Para la implementación de este proyecto se hizo uso de herramientas de código abierto tales como:
 
