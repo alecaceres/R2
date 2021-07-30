@@ -1,6 +1,5 @@
 import numpy as np
 import cv2
-import urllib.request
 from math import sqrt
 from src.python.Vision.QR_reader import getQRS
 
@@ -127,49 +126,3 @@ def getContour(img):
     print(int(width), int(length))
     return image_copy, width, length
 
-def func():
-    cam = "http://192.168.205.173:8080/shot.jpg"
-    pos_red, pos_yellow, pos_blue, pos_green = [[(0,0)]*5]*4
-    while True:
-        imgResp=urllib.request.urlopen(cam) 
-        imgNp=np.array(bytearray(imgResp.read()),dtype=np.uint8)
-        img=cv2.imdecode(imgNp,-1)
-        pos_red = getTarget(img, pos_red, "RED")
-        pos_blue = getTarget(img, pos_blue, "BLUE")
-        pos_green = getTarget(img, pos_green, "GREEN")
-        pos_yellow = getTarget(img, pos_yellow, "YELLOW")
-        result, pts= getPosNorm(img)
-        #img, width, length = getContour(img)
-        #img= cv2.rectangle(img, start_bound, end_bound, color = (0, 255, 0), thickness=2)
-        font = cv2.FONT_HERSHEY_SIMPLEX
-        if len(pts): last_known_position = pts
-        cv2.imshow("cam",img)
-        if ord('q')==cv2.waitKey(10):
-            break
-func()
-while False:
-    #This is to check whether to break the first loop
-    isclosed=0
-    cap = cv2.VideoCapture(0)
-    while (True):
-        ret, frame = cap.read()
-        # It should only show the frame when the ret is true
-        try: frame, width, length = getContour(frame)
-        except: pass
-        if ret == True:
-
-            cv2.imshow('frame',frame)
-            if cv2.waitKey(1) == 27:
-                # When esc is pressed isclosed is 1
-                isclosed=1
-                break
-        else:
-            break
-    # To break the loop if it is closed manually
-    if isclosed:
-        break
-
-
-
-cap.release()
-cv2.destroyAllWindows()
